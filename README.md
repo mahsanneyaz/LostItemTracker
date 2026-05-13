@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Platform-Android-brightgreen?style=flat-square&logo=android" />
   <img src="https://img.shields.io/badge/Language-Kotlin-purple?style=flat-square&logo=kotlin" />
   <img src="https://img.shields.io/badge/Min%20SDK-API%2026-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Version-1.0-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/Version-8.0-orange?style=flat-square" />
   <img src="https://img.shields.io/badge/Backend-Firebase-yellow?style=flat-square&logo=firebase" />
 </div>
 
@@ -15,7 +15,7 @@
 ## Download
 
 <div align="center">
-  <a href="https://github.com/mahsanneyaz/LostItemTracker/releases/download/v1.0/LostItemTracker_v7.apk">
+  <a href="https://github.com/mahsanneyaz/LostItemTracker/releases/download/v8.0/LostItemTracker v8.apk">
     <img src="https://img.shields.io/badge/⬇%20Download%20APK-v1.0-2196F3?style=for-the-badge" alt="Download APK" />
   </a>
 </div>
