@@ -204,6 +204,6 @@ If you want to build and run this project yourself:
 
 ## License
 
-This project was built as a college live project for academic purposes.
+A full-stack Android application developed as a BCA live project at SRM University.
 
 ---
