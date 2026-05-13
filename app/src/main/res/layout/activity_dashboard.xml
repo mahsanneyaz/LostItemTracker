@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/surface_container_lowest"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:elevation="2dp">
+
+        <!-- LiT logo IMAGE on the left -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/lit_logo"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- "LOST ITEM TRACKER" subtitle -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LOST ITEM TRACKER"
+            android:textSize="10sp"
+            android:textColor="@color/outline"
+            android:letterSpacing="0.1"/>
+
+        <!-- Search icon -->
+        <ImageView
+            android:id="@+id/ivSearchIcon"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:src="@drawable/ic_search"
+            android:padding="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <!-- Profile icon -->
+        <ImageView
+            android:id="@+id/ivProfileIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_person"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Greeting -->
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome back."
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/manrope"
+                android:textColor="@color/on_surface"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Report Lost card — WHITE background, RED button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_lost_bg"
+                android:padding="24dp"
+                android:layout_marginBottom="14dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_search"
+                    android:layout_marginBottom="12dp"
+                    android:tint="@color/error"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Report Lost Item"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/manrope"
+                    android:textColor="@color/on_surface"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Our matching engine starts searching instantly."
+                    android:textSize="13sp"
+                    android:textColor="@color/on_surface_variant"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingMultiplier="1.3"/>
+
+                <!-- RED button -->
+                <Button
+                    android:id="@+id/btnReportLost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="Report Lost  →"
+                    android:textColor="#E99295"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/btn_red"
+                    android:stateListAnimator="@null"
+                    app:backgroundTint="@null"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"/>
+            </LinearLayout>
+
+            <!-- Report Found card — WHITE background, GREEN button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_found_bg"
+                android:padding="24dp"
+                android:layout_marginBottom="14dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_check_circle"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Report Found Item"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/manrope"
+                    android:textColor="@color/on_surface"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Help return items to their rightful owners."
+                    android:textSize="13sp"
+                    android:textColor="@color/on_surface_variant"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingMultiplier="1.3"/>
+
+                <!-- GREEN button -->
+                <Button
+                    android:id="@+id/btnReportFound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="Report Found  →"
+                    android:textColor="#41FA6D"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/btn_green"
+                    android:stateListAnimator="@null"
+                    app:backgroundTint="@null"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"/>
+            </LinearLayout>
+
+            <!-- View Matches button -->
+            <Button
+                android:id="@+id/btnViewMatches"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="View My Matches  →"
+                android:textColor="@color/btn_text"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/manrope"
+                android:background="@drawable/btn_primary"
+                android:stateListAnimator="@null"
+                android:layout_marginBottom="28dp"/>
+
+            <!-- My Reports heading -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="My Reports"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/manrope"
+                    android:textColor="@color/on_surface"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ACTIVE INQUIRIES"
+                    android:textSize="9sp"
+                    android:textColor="@color/secondary"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMyReports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+            <TextView
+                android:id="@+id/tvNoReports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You have no reports yet.\nTap a card above to get started."
+                android:gravity="center"
+                android:textColor="@color/outline"
+                android:textSize="14sp"
+                android:padding="32dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

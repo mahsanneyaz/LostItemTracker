@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path name="camera_photos" path="."/>
+    <cache-path name="qrcodes"       path="qrcodes/"/>
+    <cache-path name="pdf_receipts"  path="receipts/"/>
+</paths>

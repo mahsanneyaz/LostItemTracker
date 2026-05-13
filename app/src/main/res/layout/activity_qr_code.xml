@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/surface_container_lowest"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/ivQrBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QR Code"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/manrope"
+            android:textColor="@color/on_surface"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share this QR code so others can find your report"
+                android:textSize="14sp"
+                android:textColor="@color/on_surface_variant"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- The generated QR code image -->
+            <ImageView
+                android:id="@+id/ivQrCode"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:scaleType="fitCenter"
+                android:background="@color/surface_container_lowest"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Item info card below the QR -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/surface_container_lowest"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvQrItemName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/manrope"
+                        android:textColor="@color/on_surface"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tvQrDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/on_surface_variant"
+                        android:lineSpacingMultiplier="1.5"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Share button -->
+            <Button
+                android:id="@+id/btnShareQr"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="Share QR Code  →"
+                android:textColor="@color/btn_text"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/manrope"
+                android:background="@drawable/btn_primary"
+                android:stateListAnimator="@null"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

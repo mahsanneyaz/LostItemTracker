@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/background">
+
+    <!-- Logo image — this gets the zoom-in animation -->
+    <ImageView
+        android:id="@+id/ivSplashLogo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/lit_logo"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- "LOST ITEM TRACKER" text — fades in slightly after logo -->
+    <TextView
+        android:id="@+id/tvSplashTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOST ITEM TRACKER"
+        android:textSize="13sp"
+        android:textColor="@color/outline"
+        android:letterSpacing="0.2"
+        android:layout_marginBottom="60dp"/>
+
+    <!-- University name -->
+    <TextView
+        android:id="@+id/tvSplashUniversity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SRM University, Sonipat"
+        android:textSize="13sp"
+        android:textColor="@color/on_surface_variant"/>
+
+</LinearLayout>

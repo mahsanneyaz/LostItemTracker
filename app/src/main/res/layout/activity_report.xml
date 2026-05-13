@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Top bar with back button -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:background="@color/surface_container_lowest"
+        android:padding="16dp" android:gravity="center_vertical" android:elevation="2dp">
+        <TextView android:id="@+id/tvReportBack" android:layout_width="40dp"
+            android:layout_height="40dp" android:text="←" android:textSize="22sp"
+            android:textColor="@color/primary" android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless" android:layout_marginEnd="8dp"/>
+        <TextView android:id="@+id/tvReportTitle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Report Lost Item"
+            android:textSize="18sp" android:textStyle="bold"
+            android:fontFamily="@font/manrope" android:textColor="@color/on_surface"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+
+            <!-- Form card -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="20dp"
+                app:cardElevation="0dp" app:cardBackgroundColor="@color/surface_container_lowest"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+
+                    <!-- Item Name -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ITEM NAME" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/outline" android:letterSpacing="0.12"
+                        android:layout_marginBottom="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/input_bg" android:layout_marginBottom="16dp">
+                        <EditText android:id="@+id/etItemName" android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:background="@null"
+                            android:paddingStart="14dp" android:hint="e.g. Blue water bottle"
+                            android:textColorHint="@color/outline" android:inputType="textCapSentences"
+                            android:textColor="@color/on_surface" android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <!-- Category -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="CATEGORY" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/outline" android:letterSpacing="0.12"
+                        android:layout_marginBottom="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/input_bg" android:layout_marginBottom="16dp">
+                        <AutoCompleteTextView android:id="@+id/spinnerCategory"
+                            android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:background="@null" android:paddingStart="14dp"
+                            android:inputType="none" android:focusable="false"
+                            android:textColor="@color/on_surface" android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <!-- Description -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="DESCRIPTION" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/outline" android:letterSpacing="0.12"
+                        android:layout_marginBottom="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="100dp"
+                        android:orientation="horizontal" android:gravity="top"
+                        android:background="@drawable/input_bg" android:layout_marginBottom="16dp">
+                        <EditText android:id="@+id/etDescription" android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:background="@null"
+                            android:paddingStart="14dp" android:paddingTop="12dp"
+                            android:hint="Colour, brand, any markings..."
+                            android:textColorHint="@color/outline" android:inputType="textMultiLine"
+                            android:gravity="top" android:textColor="@color/on_surface" android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <!-- Location -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="LOCATION" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/outline" android:letterSpacing="0.12"
+                        android:layout_marginBottom="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/input_bg" android:layout_marginBottom="16dp">
+                        <EditText android:id="@+id/etLocation" android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:background="@null"
+                            android:paddingStart="14dp" android:hint="e.g. Library, Block A"
+                            android:textColorHint="@color/outline" android:inputType="textCapSentences"
+                            android:textColor="@color/on_surface" android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <!-- Date -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="DATE" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/outline" android:letterSpacing="0.12"
+                        android:layout_marginBottom="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/input_bg" android:layout_marginBottom="8dp">
+                        <EditText android:id="@+id/etDate" android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:background="@null"
+                            android:paddingStart="14dp" android:inputType="none" android:focusable="false"
+                            android:textColor="@color/on_surface" android:textSize="15sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Photo card -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="20dp"
+                app:cardElevation="0dp" app:cardBackgroundColor="@color/surface_container_lowest"
+                android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="PHOTO (OPTIONAL)" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/outline" android:letterSpacing="0.12"
+                        android:layout_marginBottom="12dp"/>
+
+                    <ImageView android:id="@+id/ivPreview" android:layout_width="match_parent"
+                        android:layout_height="180dp" android:scaleType="centerCrop"
+                        android:background="@color/surface_container"
+                        android:src="@drawable/ic_search" android:padding="60dp"
+                        android:alpha="0.3" android:layout_marginBottom="12dp"/>
+
+                    <Button android:id="@+id/btnPickPhoto" android:layout_width="match_parent"
+                        android:layout_height="48dp" android:text="Pick Photo"
+                        android:textColor="@color/btn_text" android:textSize="14sp"
+                        android:background="@drawable/btn_primary" android:stateListAnimator="@null"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_gravity="center"
+                android:visibility="gone" android:layout_marginBottom="8dp"/>
+
+            <Button android:id="@+id/btnSubmit" android:layout_width="match_parent"
+                android:layout_height="56dp" android:text="Submit Report  →"
+                android:textColor="@color/btn_text" android:textSize="16sp" android:textStyle="bold"
+                android:fontFamily="@font/manrope" android:background="@drawable/btn_primary"
+                android:stateListAnimator="@null" android:layout_marginBottom="32dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

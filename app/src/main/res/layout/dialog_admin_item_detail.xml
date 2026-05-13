@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Details"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/manrope"
+            android:textColor="@color/on_surface"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Photo -->
+        <ImageView
+            android:id="@+id/diItemPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:background="@color/surface_container"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- All fields -->
+        <TextView android:id="@+id/diItemName"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="16sp" android:textStyle="bold" android:fontFamily="@font/manrope"
+            android:textColor="@color/on_surface" android:layout_marginBottom="6dp"/>
+
+        <TextView android:id="@+id/diType"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/diStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/diCategory"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/diDescription"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/diLocation"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/diDate"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/diImageLabels"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Divider -->
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/surface_container" android:layout_marginVertical="12dp"/>
+
+        <!-- Reported by section -->
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="REPORTED BY"
+            android:textSize="9sp" android:textStyle="bold"
+            android:textColor="@color/outline" android:letterSpacing="0.12"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView android:id="@+id/diReportedByName"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="14sp" android:textStyle="bold"
+            android:fontFamily="@font/manrope" android:textColor="@color/on_surface"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView android:id="@+id/diReportedByEmail"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/diReportedByPhone"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Action buttons -->
+        <Button android:id="@+id/diBtnMarkReturned"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="Mark as Returned"
+            android:textColor="#FFFFFF" android:backgroundTint="@color/tertiary"
+            android:layout_marginBottom="8dp"/>
+
+        <Button android:id="@+id/diBtnDelete"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="Delete This Report"
+            android:textColor="#FFFFFF" android:backgroundTint="@color/error"
+            android:layout_marginBottom="8dp"/>
+
+        <Button android:id="@+id/diBtnClose"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="Close"
+            android:textColor="@color/outline"
+            android:backgroundTint="@color/surface_container_high"/>
+
+    </LinearLayout>
+</ScrollView>

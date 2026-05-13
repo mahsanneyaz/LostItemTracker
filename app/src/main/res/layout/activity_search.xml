@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Top bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:background="@color/surface_container_lowest"
+        android:padding="16dp" android:gravity="center_vertical" android:elevation="2dp">
+        <ImageView android:id="@+id/tvSearchBack" android:layout_width="40dp"
+            android:layout_height="40dp" android:src="@drawable/ic_arrow_back"
+            android:padding="8dp" android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Search Reports"
+            android:textSize="18sp" android:textStyle="bold"
+            android:fontFamily="@font/manrope" android:textColor="@color/on_surface"/>
+        <TextView android:id="@+id/tvResultCount" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textSize="12sp"
+            android:textColor="@color/outline"/>
+    </LinearLayout>
+
+    <!-- Large heading -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp"
+        android:background="@color/surface_container_lowest">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Find what's" android:textSize="28sp" android:textStyle="bold"
+            android:fontFamily="@font/manrope" android:textColor="@color/on_surface"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="missing." android:textSize="28sp" android:textStyle="bold"
+            android:fontFamily="@font/manrope" android:textColor="@color/primary"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Search field -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:background="@drawable/input_bg" android:layout_marginBottom="12dp">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                android:src="@drawable/ic_search" android:layout_marginStart="14dp"
+                android:layout_marginEnd="10dp" android:alpha="0.5"/>
+            <EditText android:id="@+id/etSearchKeyword" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="@null"
+                android:hint="Search item name or location..."
+                android:textColorHint="@color/outline" android:inputType="text"
+                android:textColor="@color/on_surface" android:textSize="15sp"/>
+        </LinearLayout>
+
+        <!-- Filter row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Spinner android:id="@+id/spinnerType" android:layout_width="0dp"
+                android:layout_height="44dp" android:layout_weight="1"
+                android:background="@drawable/input_bg" android:layout_marginEnd="8dp"
+                android:padding="8dp"/>
+            <Spinner android:id="@+id/spinnerCategory" android:layout_width="0dp"
+                android:layout_height="44dp" android:layout_weight="1"
+                android:background="@drawable/input_bg" android:padding="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar android:id="@+id/searchProgress" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <TextView android:id="@+id/tvSearchEmpty" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="No results found.\nTry a different keyword or filter."
+        android:gravity="center" android:textColor="@color/outline" android:textSize="15sp"
+        android:padding="32dp" android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvSearchResults"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="12dp" android:clipToPadding="false"/>
+
+</LinearLayout>

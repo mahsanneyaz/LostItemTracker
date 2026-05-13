@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Details"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/manrope"
+            android:textColor="@color/on_surface"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- User info -->
+        <TextView android:id="@+id/duUserName"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="17sp" android:textStyle="bold" android:fontFamily="@font/manrope"
+            android:textColor="@color/on_surface" android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/duUserEmail"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/duUserPhone"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/duUserRole"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/duUserCreatedAt"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/duUserBlocked"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textStyle="bold"
+            android:textColor="@color/error" android:layout_marginBottom="12dp"/>
+
+        <!-- Divider -->
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/surface_container" android:layout_marginBottom="12dp"/>
+
+        <!-- Items reported section -->
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ITEMS REPORTED"
+            android:textSize="9sp" android:textStyle="bold"
+            android:textColor="@color/outline" android:letterSpacing="0.12"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Items are added dynamically here -->
+        <LinearLayout
+            android:id="@+id/llUserItemsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Divider -->
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/surface_container" android:layout_marginBottom="12dp"/>
+
+        <!-- Action buttons -->
+        <Button android:id="@+id/duBtnBlockUser"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="Block User"
+            android:textColor="#FFFFFF" android:backgroundTint="@color/error"
+            android:layout_marginBottom="8dp"/>
+
+        <Button android:id="@+id/duBtnSendWarning"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="Send Warning"
+            android:textColor="@color/on_surface"
+            android:backgroundTint="@color/surface_container_high"
+            android:layout_marginBottom="8dp"/>
+
+        <Button android:id="@+id/duBtnDeleteUser"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="Delete User Data"
+            android:textColor="@color/error"
+            android:backgroundTint="@color/error_container"
+            android:layout_marginBottom="8dp"/>
+
+        <Button android:id="@+id/duBtnClose"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="Close"
+            android:textColor="@color/outline"
+            android:backgroundTint="@color/surface_container"/>
+
+    </LinearLayout>
+</ScrollView>

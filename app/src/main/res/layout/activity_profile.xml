@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Top bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:background="@color/surface_container_lowest"
+        android:padding="16dp" android:gravity="center_vertical" android:elevation="2dp">
+        <ImageView android:id="@+id/tvProfileBack" android:layout_width="40dp"
+            android:layout_height="40dp" android:src="@drawable/ic_arrow_back"
+            android:padding="8dp" android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="My Profile" android:textSize="18sp" android:textStyle="bold"
+            android:fontFamily="@font/manrope" android:textColor="@color/on_surface"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+
+            <!-- Heading -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Your Profile" android:textSize="30sp" android:textStyle="bold"
+                android:fontFamily="@font/manrope" android:textColor="@color/primary"
+                android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ACCOUNT SETTINGS" android:textSize="10sp"
+                android:textColor="@color/outline" android:letterSpacing="0.12"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Info card with left blue border -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="16dp"
+                app:cardElevation="0dp" app:cardBackgroundColor="@color/surface_container_lowest"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Left blue accent bar -->
+                    <View android:layout_width="4dp" android:layout_height="match_parent"
+                        android:background="@color/primary"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="20dp">
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Personal Information" android:textSize="17sp"
+                            android:textStyle="bold" android:fontFamily="@font/manrope"
+                            android:textColor="@color/on_surface" android:layout_marginBottom="20dp"/>
+
+                        <!-- Email (read only) -->
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="EMAIL" android:textSize="9sp" android:textStyle="bold"
+                            android:textColor="@color/outline" android:letterSpacing="0.12"
+                            android:layout_marginBottom="4dp"/>
+                        <TextView android:id="@+id/tvProfileEmail" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:textSize="15sp"
+                            android:textColor="@color/on_surface_variant" android:paddingBottom="16dp"/>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="@color/surface_container" android:layout_marginBottom="16dp"/>
+
+                        <!-- Name field -->
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="FULL NAME" android:textSize="9sp" android:textStyle="bold"
+                            android:textColor="@color/outline" android:letterSpacing="0.12"
+                            android:layout_marginBottom="8dp"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+                            android:orientation="horizontal" android:gravity="center_vertical"
+                            android:background="@drawable/input_bg" android:layout_marginBottom="16dp">
+                            <EditText android:id="@+id/etProfileName" android:layout_width="match_parent"
+                                android:layout_height="match_parent" android:background="@null"
+                                android:paddingStart="14dp" android:inputType="textPersonName"
+                                android:textColor="@color/on_surface" android:textSize="15sp"/>
+                        </LinearLayout>
+
+                        <!-- Phone field -->
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="PHONE NUMBER" android:textSize="9sp" android:textStyle="bold"
+                            android:textColor="@color/outline" android:letterSpacing="0.12"
+                            android:layout_marginBottom="8dp"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+                            android:orientation="horizontal" android:gravity="center_vertical"
+                            android:background="@drawable/input_bg" android:layout_marginBottom="24dp">
+                            <EditText android:id="@+id/etProfilePhone" android:layout_width="match_parent"
+                                android:layout_height="match_parent" android:background="@null"
+                                android:paddingStart="14dp" android:inputType="phone"
+                                android:textColor="@color/on_surface" android:textSize="15sp"/>
+                        </LinearLayout>
+
+                        <ProgressBar android:id="@+id/profileProgress" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_gravity="center"
+                            android:layout_marginBottom="12dp" android:visibility="gone"/>
+
+                        <Button android:id="@+id/btnSaveProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:text="Save Changes  →"
+                            android:textColor="@color/btn_text"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/manrope"
+                            android:background="@drawable/btn_primary"
+                            android:stateListAnimator="@null"
+                            android:layout_marginBottom="12dp"/>
+
+                        <!-- Logout button -->
+                        <Button android:id="@+id/btnProfileLogout"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:text="Logout"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/manrope"
+                            android:backgroundTint="@color/error"
+                            android:stateListAnimator="@null"
+                            android:layout_marginBottom="12dp"/>
+
+                        <!-- Delete Account button -->
+                        <Button android:id="@+id/btnProfileDeleteAccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:text="Delete Account"
+                            android:textColor="@color/error"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/manrope"
+                            android:backgroundTint="@color/surface_container_high"
+                            android:stateListAnimator="@null"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
