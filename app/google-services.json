@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "898489561024",
+    "project_id": "lostitemtracker-d769e",
+    "storage_bucket": "lostitemtracker-d769e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898489561024:android:f5c894e419a3d0c75e2225",
+        "android_client_info": {
+          "package_name": "com.srm.lostitemtracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRnTCO1Kt3ocCYs84we4DH4k5AkGq1wYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
