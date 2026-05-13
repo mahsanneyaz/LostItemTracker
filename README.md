@@ -16,7 +16,7 @@
 
 <div align="center">
   <a href="https://github.com/mahsanneyaz/LostItemTracker/releases/download/v8.0/LostItemTracker.v8.apk">
-    <img src="https://img.shields.io/badge/⬇%20Download%20APK-v1.0-2196F3?style=for-the-badge" alt="Download APK" />
+    <img src="https://img.shields.io/badge/⬇%20Download%20APK-v8.0-2196F3?style=for-the-badge" alt="Download APK" />
   </a>
 </div>
 
